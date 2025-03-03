@@ -1,0 +1,13 @@
+version: '3'
+services:
+  p:
+    build: .
+    container_name: pr
+    volumes:
+      - "C:/Users/usuario/Documents/MLOPS/Proyecto_1:/app"
+    ports:
+      - "8888:8888"
+    environment:
+      - PYTHONPATH=/app
+    command: jupyter notebook --allow-root --ip=0.0.0.0 --port=8888 --no-browser --NotebookApp.token='' --NotebookApp.password=''
+
